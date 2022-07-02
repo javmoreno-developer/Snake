@@ -1,0 +1,7 @@
+<?xml version="1.0" standalone="no"?>
+<svg height="952.4" version="1.1" width="1060.8" xmlns="http://www.w3.org/2000/svg">
+	<line x1="118.39999999999998" x2="950.39999999999998" y1="270.2" y2="270.2" fill="#000000" stroke="#00000f" style="stroke-width: 10;"></line>
+	<line x1="117.39999999999998" x2="117.39999999999998" y1="270.2" y2="754.2" fill="#000000" stroke="#00000f" style="stroke-width: 10;"></line>
+	<line x1="950.39999999999998" x2="950.39999999999998" y1="270.2" y2="754.2" fill="#000000" stroke="#00000f" style="stroke-width: 10;"></line>
+	<line x1="117.39999999999998" x2="950.39999999999998" y1="752.2" y2="754.2" fill="#000000" stroke="#00000f" style="stroke-width: 10;"></line>
+</svg>

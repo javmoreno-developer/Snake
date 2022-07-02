@@ -1,0 +1,101 @@
+$background: black;
+$board: #90C873;
+$borde: #151515;
+$food: #E8FED7;
+$head: #326C52;
+$body: #B3DF9D;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+#all {
+	display: flex;
+	justify-content: center;
+	align-items:center;
+	height: 100vh;
+	width: 100%;
+	flex-direction: column;
+	gap:5%;
+	background:$background;
+}
+#board {
+	width: 100%;
+	height: 60%;
+	
+	display: grid;
+	grid-template-columns: repeat(9, 1fr);
+	grid-template-rows: repeat(9, 1fr);
+	border:5px solid $borde;
+	background:$board;
+}
+
+.cell {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items:center;
+	
+}
+
+.food {
+	height: 100%;
+	width: 100%;
+	background: url("img/manzana.png");
+	background-size:contain;
+	background-repeat:no-repeat;
+
+}
+
+.body_snake {
+	height: 100%;
+	width: 100%;
+	background: url("img/bodyS.svg");
+	background-size:contain;
+	background-repeat:no-repeat;
+	background-position-x: center;
+}
+.head_snake {
+	height: 100%;
+	width: 70%;
+	background: url("img/serpiente.png");
+	background-size:contain;
+	background-repeat:no-repeat;
+	background-position-x: center;
+}
+
+#mobile_controls {
+	margin-top: 2vh;
+	height: 20vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.control {
+	width: 100%;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	color:white;
+}
+.sub_control {
+	width: 50%;
+	text-align: center;
+}
+
+i {
+	font-size: 30px;
+}
+
+@media(min-width: 500px) {
+	#board {
+		width: 50%;
+	}
+	#mobile_controls {
+		display: none;
+	}
+}
