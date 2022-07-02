@@ -1,4 +1,5 @@
 var posiciones=[];//array de posiciones para el desplazamiento
+var stopGame=false;
 
 class Snake {
 	constructor(x,y,longitud=1,direccion="down") {
@@ -33,6 +34,7 @@ class Snake {
 		//rellenamos el array de direcciones
 
 		//fin
+		if(stopGame==false) {
 		for(let i=0;i<this.longitud;i++) {
 
 			
@@ -96,7 +98,7 @@ class Snake {
 					break;
 					default:
 				}
-				
+
 				posiciones.push(anteriorCell);
 				//creacion del elemento
 				let sn = document.createElement("div");
@@ -111,6 +113,7 @@ class Snake {
 		//fin de desplazar
 		checkGameOver(posiciones);
 		posiciones=[];
+	}
 	}
 }
 
@@ -128,7 +131,18 @@ function checkGameOver(param) {
 	let total=s1.x*9+s1.y;
 	for(let i=0;i<param.length;i++) {
 		if(param[i]==total) {
-			alert("fin del juego");
+			stopGame=true;
+
+			swal({
+			  title: "Game over",
+			  type: "error",
+			  confirmButtonColor: "#DD6B55",
+			  confirmButtonText: "Reiniciar juego",
+			  closeOnConfirm: false
+			},
+			function(){
+			  window.location.reload();
+			});
 		}
 	}
 }
