@@ -28,7 +28,7 @@ function insertSnake() {
 		ySnake=parseInt(Math.random()*9)+1;
 	} while(xFood==xSnake && yFood==ySnake);
 
-	s1=new Snake(xSnake,ySnake,7);
+	s1=new Snake(xSnake,ySnake,1);
 	//s1=new Snake(4,2,5);
 	
 	console.log("x snake: "+xSnake);
