@@ -5,6 +5,7 @@ var f1;
 var requestID;
 var timer;
 var requestID2;
+var out;
 
 //insertamos la comida
 function insertFood() {
@@ -50,7 +51,7 @@ $("body").keydown((e)=> {
 	//teclas: 37 izq 38 arriba 39 derecha 40 abajo
 	//console.log(s1.direccion);
     pause();
-    setTimeout(()=>{
+    out = setTimeout(()=>{
 			requestID2 = window.requestAnimationFrame(function() {
 	    		move(e);
 	   		});
@@ -68,7 +69,7 @@ $("body").keydown((e)=> {
     $("#"+i+"").click(()=> {
     	let dir=$(this).attr('id');
     	pause();
-	    setTimeout(()=>{
+	   out = setTimeout(()=>{
 			requestID2 = window.requestAnimationFrame(function() {
 		    	moveMobile(dir);
 			});
@@ -181,4 +182,5 @@ function pause() {
     window.cancelAnimationFrame(requestID);
     window.cancelAnimationFrame(requestID2);
     clearTimeout(timer);
+    clearTimeout(out);
 }
